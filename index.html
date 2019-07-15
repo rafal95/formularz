@@ -27,7 +27,77 @@
                 </div>
             </nav>
             <header id="header">
-                <div class="panel"></div>
+                <div class="center-header">
+                    <p class="header-title">Twoje konto</a>
+                    <div class="bookmarks_bottom">
+                            <ul>
+                                    <li><a class="active" href="#">Ustawienia</a></li>
+                                    <li><a href="#">Podsumowanie</a></li>
+                                    <li><a href="#">Twoja dieta</a></li>
+                            </ul>
+                    </div>
+                    <div class="bookmarks_top">
+                        <a class="welcome">witaj, JANUSZ</a>
+                        <ul>
+                                <li><a href="#">TWOJE KONTO</a></li>
+                                <li><a href="#">WYLOGUJ SIĘ</a></li>
+                        </ul>
+                    </div>
+                </div>
             </header>
+            <section class="container">
+                <h1 class="title">Dane do logowania</h1>
+                <div class="menu-left"> 
+                        <ul>
+                                <li><a class="active" href="#">Twoje konto</a></li>
+                                <li><a href="#">Panel użytkownika</a></li>
+                                <li><a href="#">Lista zakupowa</a></li>
+                                <li><a href="#">Przepisy na co dzień</a></li>
+                                <li><a href="#">Przepisy okazjonalne</a></li>
+                                <li><a href="#">Spiżarnia</a></li>
+                                <li><a href="#">Kalendarz / notaki/a></li>
+                                <li><a href="#">Porady kulinarne</a></li>
+                        </ul>
+                </div>
+                <form action="#" method="POST">
+                    <figcaption>Imię / nick</figcaption> 
+                    <input type="text">
+                    <figcaption>Adres e-mail</figcaption>
+                    <input type="email">
+                    <figcaption class="tip">Adres e-mail będzie służył do logowania w serwisie.</figcaption>
+                    <figcaption>Nowe hasło</figcaption>
+                    <input type="password">
+                    <figcaption class="tip">Hasło powinno zawierać co najmniej 8 znaków.</figcaption>
+                    <figcaption>Powtórz nowe hasło</figcaption>
+                    <input type="password">
+                    <figcaption>Kraj</figcaption>
+                    <select name="country">
+                        <option>Polska</option>
+                    </select>
+                    <figcaption>Kod pocztowy</figcaption>
+                    <input type="text" pattern="^\d{2}-\d{3}$"></br>
+                    <input type="submit" value="ZAPISZ" name="dodaj" class="btn save-btn" />
+                </form>
+            </section>
+            <section class="container">
+                <h1 class="title">Ankieta</h1>
+                <fieldset>
+                        <figcaption>Płeć</figcaption></br>
+                        <input type="radio" name="Płeć" value="Kobieta" checked>Kobieta
+                        <input type="radio" name="Płeć" value="Mężczyzna">Mężczyzna
+                </fieldset>
+            </section>
+            <section class="container">
+                <h1 class="title">Rodzina</h1>
+                <table>
+                        <tr>
+                          <th>Imię / nick</th>
+                          <th>Adres e-mail</th>
+                          <th>Status</th>
+                          <th></th>
+                        </tr>
+                </table>
+                <button class="btn btn-rgt">ZAPROŚ KOLEJNĄ OSOBĘ</button>
+            </section>
 	</body>
 </html>

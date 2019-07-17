@@ -2,6 +2,7 @@
 <html>
 	<head>
         <meta charset="UTF-8">
+        <script src="script.js" async></script>
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <link rel="Stylesheet" href="style.css">
 		<title></title>
@@ -45,59 +46,192 @@
                     </div>
                 </div>
             </header>
-            <section class="container">
-                <h1 class="title">Dane do logowania</h1>
-                <div class="menu-left"> 
+            <main class="container">
+                <div class="menu-right"> 
                         <ul>
-                                <li><a class="active" href="#">Twoje konto</a></li>
+                                <li><a href="#">Twoje konto</a></li>
                                 <li><a href="#">Panel użytkownika</a></li>
                                 <li><a href="#">Lista zakupowa</a></li>
                                 <li><a href="#">Przepisy na co dzień</a></li>
                                 <li><a href="#">Przepisy okazjonalne</a></li>
                                 <li><a href="#">Spiżarnia</a></li>
-                                <li><a href="#">Kalendarz / notaki/a></li>
+                                <li><a href="#">Kalendarz / notaki</a></li>
                                 <li><a href="#">Porady kulinarne</a></li>
                         </ul>
                 </div>
-                <form action="#" method="POST">
-                    <figcaption>Imię / nick</figcaption> 
-                    <input type="text">
-                    <figcaption>Adres e-mail</figcaption>
-                    <input type="email">
-                    <figcaption class="tip">Adres e-mail będzie służył do logowania w serwisie.</figcaption>
-                    <figcaption>Nowe hasło</figcaption>
-                    <input type="password">
-                    <figcaption class="tip">Hasło powinno zawierać co najmniej 8 znaków.</figcaption>
-                    <figcaption>Powtórz nowe hasło</figcaption>
-                    <input type="password">
-                    <figcaption>Kraj</figcaption>
-                    <select name="country">
-                        <option>Polska</option>
-                    </select>
-                    <figcaption>Kod pocztowy</figcaption>
-                    <input type="text" pattern="^\d{2}-\d{3}$"></br>
-                    <input type="submit" value="ZAPISZ" name="dodaj" class="btn save-btn" />
-                </form>
-            </section>
-            <section class="container">
-                <h1 class="title">Ankieta</h1>
-                <fieldset>
-                        <figcaption>Płeć</figcaption></br>
-                        <input type="radio" name="Płeć" value="Kobieta" checked>Kobieta
-                        <input type="radio" name="Płeć" value="Mężczyzna">Mężczyzna
-                </fieldset>
-            </section>
-            <section class="container">
-                <h1 class="title">Rodzina</h1>
-                <table>
-                        <tr>
-                          <th>Imię / nick</th>
-                          <th>Adres e-mail</th>
-                          <th>Status</th>
-                          <th></th>
-                        </tr>
-                </table>
-                <button class="btn btn-rgt">ZAPROŚ KOLEJNĄ OSOBĘ</button>
-            </section>
+                <section class="content">
+                    <h1 class="title">Dane do logowania</h1>
+                    <form action="#" method="POST">
+                        <figcaption>Imię / nick</figcaption> 
+                        <input type="text">
+                        <figcaption>Adres e-mail</figcaption>
+                        <input type="email">
+                        <figcaption class="tip">Adres e-mail będzie służył do logowania w serwisie.</figcaption>
+                        <figcaption>Nowe hasło</figcaption>
+                        <input type="password">
+                        <figcaption class="tip">Hasło powinno zawierać co najmniej 8 znaków.</figcaption>
+                        <figcaption>Powtórz nowe hasło</figcaption>
+                        <input type="password">
+                        <figcaption>Kraj</figcaption>
+                        <select name="country">
+                            <option>Polska</option>
+                        </select>
+                        <figcaption>Kod pocztowy</figcaption>
+                        <input type="text" pattern="^\d{2}-\d{3}$"></br>
+                        <input type="submit" value="ZAPISZ" name="dodaj" class="btn save-btn" />
+                    </form>
+                </section>
+                <section class="content">
+                    <h1 class="title">Ankieta</h1>
+                    <fieldset>
+                            <h4>Płeć</h4>
+                            <input id="K" type="radio" name="sex" value="Kobieta" checked><label for="K">Kobieta</label>
+                            <input id="M" type="radio" name="sex" value="Mężczyzna"><label for="M">Mężczyzna</label>
+                    </fieldset>
+                    <articel class="column">
+                        <h2 class="column-title">Dane obowiązkowe</h2>
+                        <form action="#" method="POST">
+                                <figcaption>Wzrost (cm)</figcaption>
+                                <input type="text">
+                                <figcaption>Waga (kg)</figcaption>
+                                <input type="text">
+                                <figcaption>Wiek</figcaption>
+                                <input type="text">
+                                <figcaption>Czy jesteś w ciąży lub karmisz piersią</figcaption>
+                                <input id="N" type="radio" name="info" value="nie" checked><label for="N">Nie</label>
+                                <input id="C" type="radio" name="info" value="ciaza"><label for="C">Jestem w ciąży</label></br>
+                                <input id="KP" type="radio" name="info" value="karmienie"><label for="KP">Karmię piersią</label>
+                                <figcaption>Tydzień ciąży</figcaption>
+                                <input type="text">
+                                <figcaption>Waga sprzed ciąży (kg)</figcaption>
+                                <input type="text">
+                                <figcaption>Data porodu</figcaption>
+                                <input type="text">
+                        </form>
+                    </articel>
+                    <articel class="column">
+                            <h2 class="column-title">Dane opcjonalne</h2>
+                            <form action="#" method="POST">
+                                    <figcaption>Obwód pasa (cm)</figcaption> 
+                                    <input type="text">
+                                    <figcaption>Obwód tali (cm)</figcaption>
+                                    <input type="text">
+                                    <figcaption>Obówd bioder (cm)</figcaption>
+                                    <input type="text">
+                                    <figcaption>Obówd łydki (cm)</figcaption>
+                                    <input type="text">
+                                    <figcaption>Obówd uda (cm)</figcaption>
+                                    <figcaption>Obówd piersi (cm)</figcaption>
+                                    <figcaption>Obówd nadgarstka (cm)</figcaption>
+                                    <figcaption>Obówd bicepsa (cm)</figcaption>
+                                    <figcaption>Obówd szyi (cm)</figcaption>
+                            </form>
+                    </articel>
+                </section>
+                <section class="content">
+                    <h1 class="title">Rodzina</h1>
+                    <table>
+                            <tr>
+                            <th>Imię / nick</th>
+                            <th>Adres e-mail</th>
+                            <th>Status</th>
+                            <th></th>
+                            </tr>
+                            <tr>
+                                <td>aaa</td>
+                                <td>aaa</td>
+                                <td>aaa</td>
+                                <td>aaa</td>
+                            </tr>
+                    </table>
+                    <button class="btn btn-rgt">ZAPROŚ KOLEJNĄ OSOBĘ</button>
+                </section>
+                <section class="content">
+                    <h1 class="title  inline-block">Alergeny i nietolerancje pokarmowe</h1>
+                    <div class="change">
+                        <a>nie</a>
+                        <div class="slide">
+                            <div id="bull" class="bullet bullet-rgt"></div>
+                        </div>
+                        <a>tak</a> 
+                    </div>
+                    <div class="select"> 
+                            <ul>
+                                    <li id="f1" class="first-level"><div><p class="caption">MLEKO</p> <img src="img/list_up_img.png"></div>
+                                    <ul>
+                                        <li  class="two-level"><div><a href="#">Mleko krowie</a><img src="img/list_up_img.png"></div>
+                                            <ul>
+                                                <li class="thrid-level"><div ><a href="#">Wszystkie rodzaje</a><img src="img/list_up_img.png"></li>
+                                                <li class="thrid-level"><div><a href="#">Surowe</a><img src="img/list_up_img.png"></li>
+                                                <li class="thrid-level"><div><a href="#">Gotowane</a><img src="img/list_up_img.png"></li>
+                                            </ul>
+                                        </li>
+                                        <li  class="two-level"><div><a href="#">Mleko kozie</a><img src="img/list_up_img.png"></div>
+                                        <li  class="two-level"><div><a href="#">Mleko owcze</a><img src="img/list_up_img.png"></div>
+                                    </ul>
+                                    </li>
+                                    <li id="f2" class="first-level"><div><p class="caption">ORZECHY</p><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">OWOCE</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">DWUTLENEK SIARKI</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">ROŚLINY STRĄCZKOWE</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">RYBY I OWOCE MORZA</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">GORCZYCA</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">SEZAM</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">SELER</a><img src="img/list_up_img.png"></div></li>
+                                    <li  class="first-level"><div><a href="#">ZBOŻA</a><img src="img/list_up_img.png"></div></li> 
+                            </ul>      
+                    </div>
+                </section>
+                <section class="content">
+                    <h1 class="title">Aktywność fizyczna</h1>    
+                    <input  id="tryb_siedzacy" type="radio" name="aktywnosc_fizyczna" value="tryb_siedzacy"><label for="tryb_siedzacy">Tryb siedzący (mało ruchu, zajęcia codzienne nie wymagające wysiłku fizycznego, jazda samochodem)</label></br>
+                    <input  id="niska_aktywnosc" type="radio" name="aktywnosc_fizyczna" value="niska_aktywnosc"><label for="niska_aktywnosc">Niska aktywność (praca biurowa, krótkie spacery, lekkie prace w ogrodzie)</label></br>
+                    <input  id="lekka_aktywnosc" type="radio" name="aktywnosc_fizyczna" value="lekka_aktywnosc" checked><label for="lekka_aktywnosc">Lekka aktywność (cięższe prace w ogrodzie, ćwiczenia fizyczne 30-60 min 2-3 razy w tygodniu</label></br>
+                    <input  id="srednia_aktywnosc" type="radio" name="aktywnosc_fizyczna" value="srednia_aktywnosc"><label for="srednia_aktywnosc">Średnia aktywność (cwiczenia fizyczne powyżej 60 min 2-3 razy w tygodniu, lekkie prace budowlane)</label></br>
+                    <input  id="wysoka_aktywnosc" type="radio" name="aktywnosc_fizyczna" value="wysoka_aktywnosc"><label for="wysoka_aktywnosc">Wysoka aktywność (ćwiczenia fizyczne powyżej 60 min 4-5 razy w tygodniu, prace budowlane prowadzone narzędziami ręcznymi)</label></br>
+                    <input  id="bardzo_wysoka_aktywnosc" type="radio" name="aktywnosc_fizyczna" value="bardzo_wysoka_aktywnosc"><label for="bardzo_wysoka_aktywnosc">Bardzo wysoka aktywność (ćwiczenia fizyczne powyżej 120 min 4-7 razy w tygodniu, ciężkie prace budowlane)</label>
+                </section>
+                <section class="content">
+                    <h1 class="title">Subskrypcja</h1> 
+                    <div class="field">
+                        <button class="btn btn-rgt btn-centered">PRZEDŁUŻ SUBSKRYPCJĘ</button>
+                        <p>
+                            <a>Ważność Twojej subskrypcji</a>
+                            <a>01.09.2018</a>    
+                        </p>    
+                    </div>
+                </section>
+                <section class="content">
+                    <h1 class="title">Ustawienia serwisu</h1>
+                   <input id="reklamy"  type="checkbox"> <label for="reklamy">Wyłącz reklamy w serwisie</label>
+                   <input id="maile"  type="checkbox"> <label for="maile">Wyłącz powiadomienia mailowe wysyłane z serwisu</label>          
+                </section>
+                <section class="content">
+                    <h1 class="title">Szablon kolorystyczny</h1>
+                    <div class="img-container">
+                        <img src="img/s1.png" alt="szablon"><input id="s1"  type="radio" name="szablon" value="s1" checked>
+                            <label for="s1">Domyślny szablon</label>
+                    </div>
+                    <div class="img-container">
+                        <img src="img/s2.png" alt="szablon"><input id="s2"  type="radio" name="szablon" value="s2">
+                            <label for="s2">Szablon A</label>
+                    </div>
+                    <div class="img-container">
+                        <img src="img/s3.png" alt="szablon"><input id="s3"  type="radio" name="szablon" value="s3">
+                            <label for="s3">Szablon B</label>
+                    </div>
+                    <div class="img-container">
+                        <img src="img/s4.png" alt="szablon"><input id="s4"  type="radio" name="szablon" value="s4">
+                            <label for="s4">Szablon C</label>
+                    </div>
+                </section>
+                <section class="content">
+                    <h1 class="title">Obraz tła</h1> 
+                    <input id="file" type="file" name="plik" accept="image/jpeg,image/png,image/gif"><label class="btn" for="file">PRZEGLĄDAJ</label>
+                    <p class="tip inline-block">Możesz dodać własny obraz, wyświetlany w tle serwisu. Zalecany wymiar to conajmniej 1200x1000 px</p>
+                </section>
+            </main>
+            <footer>
+            </footer>
 	</body>
 </html>

@@ -199,7 +199,7 @@ $content_width: 1300px - 230px;
 }
 
 .container{
-   // position: relative;
+    position: relative;
     width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -359,12 +359,41 @@ input[type=checkbox] {
     display: none;  
 }
 
-input[type=checkbox] +label{  
+input[type=checkbox] +p{  
     display: block;
     margin-bottom: 30px;
 }
 
-input[type=checkbox] + label:before{
+input[type=checkbox] + p:after{
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    margin-right: 10px;  
+    position: absolute;  
+    right: 20px;
+    top: 50%;
+    margin-top: -10px;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .7), 0px 0px 2px rgba(255, 255, 255, .8);  
+    background-color: rgba(255, 255, 255, 0)
+}
+
+input[type=checkbox]:checked + p:after { 
+    background-image: url("img/checked_img.png");
+    background-repeat: no-repeat;
+}
+
+input[type=checkbox] {  
+    display: none;  
+}
+
+input[type=checkbox] +.checkbox{  
+    display: block;
+    margin-bottom: 30px;
+}
+
+input[type=checkbox] +.checkbox:before{
     content: "";  
     display: inline-block;  
     width: 20px;  
@@ -377,7 +406,7 @@ input[type=checkbox] + label:before{
     background-color: rgba(255, 255, 255, 0)
 }
 
-input[type=checkbox]:checked + label:before { 
+input[type=checkbox]:checked + .checkbox:before { 
     background-image: url("img/checked_img.png");
     background-repeat: no-repeat;
 }
@@ -445,6 +474,7 @@ select{
     top: 0;
     display: inline-block;
     width: $content_width/2 - 2;
+    column-fill: auto
 }
 
 .column-title{
@@ -480,7 +510,7 @@ select{
 }
 
 .two-level > div{
-    padding: 10px 10px 10px 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 .thrid-level{
@@ -488,7 +518,7 @@ select{
 }
 
 .thrid-level > div{
-    padding: 10px 10px 10px 30px;
+    padding: 10px 30px 10px 30px;
 }
 
 .select ul{
@@ -496,6 +526,7 @@ select{
 }
 
 .select ul li div{
+    position: relative;
     border: solid 1px #e3e3e3;
 }
 
@@ -611,8 +642,69 @@ select{
 footer{
     height: 480px;
     background-image: url("img/footer_img.png");
+    background-size: cover;
 }
 
 .more{
     color: black;
+}
+
+.hidden{
+    display: none;
+}
+
+.arrow{
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.footer_container{
+    width:1200px;
+    padding: 0 50px 0 50px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.footer_box{
+    position: absolute;
+    width:100%;
+    bottom: 12%;
+}
+
+
+.footer_box p{
+    display: inline;
+}
+
+.footer_box p:first-child{
+    font-size: 11px;
+    color: #cfcfcf;
+    float: left;
+}
+
+.footer_box p:last-child{
+    font-size: 11px;
+    color: #cfcfcf;
+    float: right;
+}
+
+.footer_content{
+    color: white;
+    column-count: 4;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    column-width:250px;; 
+}
+
+.footer_content ul{
+    break-after: column;
+}
+
+ul{
+    list-style-type: none;
 }

@@ -158,27 +158,27 @@
                     <div class="select"> 
                             <ul>
                                     <li id="f1" class="first-level"><div><p class="caption">MLEKO</p> <img src="img/list_up_img.png"></div>
-                                    <ul>
-                                        <li  class="two-level"><div><a href="#">Mleko krowie</a><img src="img/list_up_img.png"></div>
-                                            <ul>
-                                                <li class="thrid-level"><div ><a href="#">Wszystkie rodzaje</a><img src="img/list_up_img.png"></li>
-                                                <li class="thrid-level"><div><a href="#">Surowe</a><img src="img/list_up_img.png"></li>
-                                                <li class="thrid-level"><div><a href="#">Gotowane</a><img src="img/list_up_img.png"></li>
+                                    <ul class="hidden">
+                                        <li id="f1-t1" class="two-level"><div><p class="caption">Mleko krowie</p><img src="img/list_up_img.png"></div>
+                                            <ul class = "hidden">
+                                                <li id="f1-t1-th1" class="thrid-level"><div><p class="caption">Wszystkie rodzaje</p><input id="wszystkie" type="checkbox"><p></p></div></li>
+                                                <li id="f1-t1-th2" class="thrid-level"><div><p class="caption">Surowe</p><input id="surowe"  type="checkbox"><p></p></div></li>
+                                                <li id="f1-t1-th3"  class="thrid-level"><div><p class="caption">Gotowane</p><input id="gotowane"  type="checkbox"><p></p></div></li>
                                             </ul>
                                         </li>
-                                        <li  class="two-level"><div><a href="#">Mleko kozie</a><img src="img/list_up_img.png"></div>
-                                        <li  class="two-level"><div><a href="#">Mleko owcze</a><img src="img/list_up_img.png"></div>
+                                        <li id="f1-t2" class="two-level"><div><p class="caption">Mleko kozie</p><img src="img/list_up_img.png"></div>
+                                        <li id="f1-t3" class="two-level"><div><p class="caption">Mleko owcze</p><img src="img/list_up_img.png"></div>
                                     </ul>
                                     </li>
                                     <li id="f2" class="first-level"><div><p class="caption">ORZECHY</p><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">OWOCE</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">DWUTLENEK SIARKI</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">ROŚLINY STRĄCZKOWE</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">RYBY I OWOCE MORZA</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">GORCZYCA</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">SEZAM</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">SELER</a><img src="img/list_up_img.png"></div></li>
-                                    <li  class="first-level"><div><a href="#">ZBOŻA</a><img src="img/list_up_img.png"></div></li> 
+                                    <li id="f3" class="first-level"><div><p class="caption">OWOCE</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f4" class="first-level"><div><p class="caption">DWUTLENEK SIARKI</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f5" class="first-level"><div><p class="caption">ROŚLINY STRĄCZKOWE</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f6" class="first-level"><div><p class="caption">RYBY I OWOCE MORZA</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f7" class="first-level"><div><p class="caption">GORCZYCA</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f8" class="first-level"><div><p class="caption">SEZAM</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f9" class="first-level"><div><p class="caption">SELER</p><img src="img/list_up_img.png"></div></li>
+                                    <li id="f10" class="first-level"><div><p class="caption">ZBOŻA</p><img src="img/list_up_img.png"></div></li> 
                             </ul>      
                     </div>
                 </section>
@@ -203,8 +203,8 @@
                 </section>
                 <section class="content">
                     <h1 class="title">Ustawienia serwisu</h1>
-                   <input id="reklamy"  type="checkbox"> <label for="reklamy">Wyłącz reklamy w serwisie</label>
-                   <input id="maile"  type="checkbox"> <label for="maile">Wyłącz powiadomienia mailowe wysyłane z serwisu</label>          
+                   <input id="reklamy"  type="checkbox"> <label class="checkbox" for="reklamy">Wyłącz reklamy w serwisie</label>
+                   <input id="maile"  type="checkbox"> <label class ="checkbox" for="maile">Wyłącz powiadomienia mailowe wysyłane z serwisu</label>          
                 </section>
                 <section class="content">
                     <h1 class="title">Szablon kolorystyczny</h1>
@@ -232,6 +232,30 @@
                 </section>
             </main>
             <footer>
+                <section class="footer_container">
+                    <article class="footer_content">
+                        <ul>
+                            <li>O nas</li>
+                            <li>Kontakt</li>
+                        </ul>
+                        <ul>
+                            <li>Współpraca</li>
+                            <li>Dla reklamodawców</li>
+                        </ul>
+                        <ul>
+                            <li>Polityka Prywatnośći</li>
+                            <li>Polityka cookies</li>
+                            <li>Regulamin</li>
+                            <li>Kup premium</li>
+                            <li>Wykorzystaj kod</li>
+                            <li>Podaruj w prezencie</li>
+                        </ul>
+                    </article>
+                    <articel class="footer_box">
+                        <p>ProgramDiety.pl 2018 Wszelkie prawa zastrzeżone.</p>
+                        <p>realizacja: ideo</p>
+                    </articel>
+                </section>
             </footer>
 	</body>
 </html>
